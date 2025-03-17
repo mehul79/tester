@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
 
 app.post("/user", (req,res) => {
   const body = req.body;
-  res.json({msg: "User created", body: body});
+  res.json({msg: "aba jaba", body: body});
 });
 
 
