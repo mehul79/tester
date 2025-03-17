@@ -1,17 +1,20 @@
 import express from "express";
 const app = express();
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
 app.post("/user", (req,res) => {
   const body = req.body;
-  res.json({msg: "aba jaba", result: body}).status(203)
+  res.status(203).json({msg: "aba jaba", result: body})
 });
 
 app.get("/user", (req,res) => {
-  res.json({msg: "aba jaba"}).status(200)
+  res.status(200).json({msg: "dfsfdsfsd"})
 });
+
 
 
 app.listen(3000, () => {
